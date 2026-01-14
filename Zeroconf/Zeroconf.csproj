@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net8.0;netstandard2.0;net48;net10.0-ios;net10.0-maccatalyst;net10.0-android</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net10.0;net10.0-ios;net10.0-maccatalyst;net10.0-android</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.26100.0</TargetFrameworks>
     <Copyright>© Claire Novotny 2016-2024</Copyright>
     <PackageTags>zeroconf;bonjour;mdns;service;discovery;maui;xamarin;netstandard;universal</PackageTags>
     <Authors>Claire Novotny</Authors>
